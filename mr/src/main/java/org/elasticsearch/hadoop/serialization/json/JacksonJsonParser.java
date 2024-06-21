@@ -257,8 +257,14 @@ public class JacksonJsonParser implements Parser {
     public byte[] binaryValue() {
         try {
             return parser.getBinaryValue();
-        } catch (IOException ex) {
-            throw new EsHadoopSerializationException(ex);
+        } catch (IOException _ex) {
+            try {
+                String text = parser.getText();
+
+                return text.getBytes()
+            } catch(IOException ex) {
+                throw new EsHadoopSerializationException(ex);
+            }
         }
     }
 

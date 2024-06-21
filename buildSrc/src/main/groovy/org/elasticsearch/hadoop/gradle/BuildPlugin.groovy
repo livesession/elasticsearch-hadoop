@@ -170,7 +170,7 @@ class BuildPlugin implements Plugin<Project>  {
      */
     private static void configureRepositories(Project project) {
         project.repositories.mavenCentral()
-        project.repositories.maven { url "https://conjars.org/repo" }
+        project.repositories.maven { url "https://conjars.wensel.net/repo" }
         project.repositories.maven { url "https://clojars.org/repo" }
         project.repositories.maven { url 'https://repo.spring.io/plugins-release' }
 
@@ -467,7 +467,7 @@ class BuildPlugin implements Plugin<Project>  {
                         if (cascading)
                             repository {
                                 id = 'conjars.org'
-                                url = 'https://conjars.org/repo'
+                                url = 'https://conjars.wensel.net/repo'
                             }
                         if (storm)
                             repository {

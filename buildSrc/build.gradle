@@ -26,7 +26,7 @@ repositories {
     mavenCentral()
 
     // For resolving propdeps (provided/optional dependencies)
-    maven { url 'https://repo.spring.io/plugins-release-local' }
+    maven { url 'https://repo.spring.io/plugins-snapshot' }
 
     // For Elasticsearch snapshots.
     if (localRepo) {
@@ -42,7 +42,7 @@ dependencies {
     compile localGroovy()
 
     // Provided/Optional Dependencies
-    compile 'org.springframework.build.gradle:propdeps-plugin:0.0.7'
+    compile 'org.springframework.build.gradle:propdeps-plugin:0.0.7-SNAPSHOT'
 
     if (localRepo) {
         compile name: "build-tools-${version}"
